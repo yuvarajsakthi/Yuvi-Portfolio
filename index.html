@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YUVI PORTFOLIO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,Initial-scale=1.0" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./" />
+    <!-- fonts -->
+    <link
+      href="
+    https://cdn.jsdelivr.net/npm/@qpokychuk/gilroy@1.0.2/index.min.css
+    "
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="initial.css" />
+    <!-- <link rel="stylesheet" href="animations.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <!-- animation scripts -->
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const loads = document.querySelectorAll(".loads");
+          loads.forEach((e, index) => {
+            setTimeout(() => {
+              e.classList.remove("loads");
+            }, 1000);
+          });
+        }, 100);
+        setTimeout(() => {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "animations.css";
+          document.head.appendChild(link);
+        }, 1050);
+        const AnimateElements = document.querySelectorAll(".animate");
+        AnimateElements.forEach((element) => {
+          if (element.getAttribute("animate-delay")) {
+            const delay = element.getAttribute("animate-delay");
+            element.style.animationDelay = delay;
+          }
+          if (element.getAttribute("animate-path")) {
+            const direction = element.getAttribute("animate-path");
+            element.style.animationDirection = direction;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="root dark">
+      <header class="header loads animate fadeIn" animate-delay="0.15s">
+        <nav>
+          <div class="logo"><strong>Yuvaraj</strong> S</div>
+          <ul class="nav__links">
+            <li>
+              <a href="#" class="animate fadeIn colormode" animate-delay="0.2s"
+                >DARK MODE</a
+              >
+            </li>
+            <li>
+              <a href="#PROJECTS" class="animate fadeIn" animate-delay="0.3s"
+                >PROJECTS</a
+              >
+            </li>
+            <li>
+              <a href="#ABOUT-ME" class="animate fadeIn" animate-delay="0.4s"
+                >ABOUT</a
+              >
+            </li>
+            <li>
+              <a href="#CONTACT" class="animate fadeIn" animate-delay="0.5s"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="hero loads">
+          <img
+            src="assets/Vector.png"
+            class="hero__flowerSpiral animate fullrotate"
+            alt="flowerSpiral Design"
+          />
+          <h1 class="animate fadeIn" animate-delay="0.01s">
+            Crafting <span>Code</span>, Shaping <span>Dreams</span>, Weaving
+            Logic into
+            <span>Digital Streams</span>
+          </h1>
+        </section>
+        <section class="author loads">
+          <img
+            src="assets/pfp.jpg"
+            class="author__img animate scaler"
+            title="Yuvaraj"
+            alt="This is me Yuvaraj"
+          />
+        </section>
+        <section class="projects loads" id="PROJECTS">
+          <ul class="projects_holder">
+            <li class="project animate stagger" animate-delay="0s">
+              <a href="https://github.com/yuvarajsakthi/Employee-Management-System" target="_blank">
+                <div class="project-title animate fadeIn">
+                  <h2>Employee Management System</h2>
+                  <span class="project arrow"
+                    ><img src="assets/ARROW.png" alt="project Arrow"
+                  /></span>
+                </div>
+                <img
+                  src="assets/project1.png"
+                  alt="Musea img"
+                  class="project_img"
+                />
+              </a>
+            </li>
+            <li class="project animate stagger" animate-delay="0.075s">
+              <a href="https://yuvarajsakthi.github.io/WeatherMan/" target="_blank">
+                <div class="project-title animate fadeIn">
+                  <h2>WeatherMan</h2>
+                  <span class="project arrow"
+                    ><img src="assets/ARROW.png" alt="project Arrow"
+                  /></span>
+                </div>
+                <img
+                  src="assets/project2.png"
+                  alt="Musea img"
+                  class="project_img"
+                />
+              </a>
+            </li>
+            <li class="project animate stagger" animate-delay="0.15s">
+              <a href="https://github.com/yuvarajsakthi/LibraryManagement" target="_blank">
+                <div class="project-title animate fadeIn">
+                  <h2>Library Management System</h2>
+                  <span class="project arrow"
+                    ><img src="assets/ARROW.png" alt="project Arrow"
+                  /></span>
+                </div>
+                <img
+                  src="assets/project3.png"
+                  alt="Musea img"
+                  class="project_img"
+                />
+              </a>
+            </li>
+            <!-- <li class="project animate stagger" animate-delay="0.175s">
+              <a href="#">
+                <div class="project-title animate fadeIn">
+                  <h2>Musea</h2>
+                  <span class="project arrow"
+                    ><img src="assets/ARROW.png" alt="project Arrow"
+                  /></span>
+                </div>
+                <img
+                  src="assets/IMAGE.png"
+                  alt="Musea img"
+                  class="project_img"
+                />
+              </a>
+            </li> -->
+            <p class="projects_info animate fadeIn" animate-delay="0.15s">
+              Wondering What project to do Next? Why don't you hire me for your
+              Next Projects?
+            </p>
+          </ul>
+        </section>
+        <section class="about-me loads" id="ABOUT-ME">
+          <img
+            src="assets/Vector2.png"
+            alt="loadingSpiralImageGraphic"
+            class="loading_spiral animate fullrotate"
+          />
+          <p class="animate fadeIn">
+            I am an Innovative Web Developer and Software Developer, who seeks
+            to work in a pragmatic way in an organization where I can show my
+            talent and enhance my skills to meet company goals and objectives
+            with full integrity and zest
+          </p>
+        </section>
+        <section class="contact loads" id="CONTACT">
+          <a
+            href="mailto:sakthiyuavarj7@gmail.com"
+            class="contact-link animate fadeIn"
+            target="_blank"
+          >
+            <h3>
+              <span>Have some questions?</span>
+              <span class="contact arrow"
+                ><img src="assets/ARROW.png" alt="project Arrow"
+              /></span>
+            </h3>
+            <button class="contact-btn animate fadeIn" animate->
+              Contact Me
+            </button>
+          </a>
+        </section>
+        <footer class="footer loads animate fadeIn" animate-delay=".15s">
+          <ul class="footer__links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/yuvaraj003/"
+                class="footer__link animate stagger fadeIn"
+                animate-delay="0.65s"
+                target="_blank"
+                >LINKEDN</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/yuvarajsakthi"
+                class="footer__link animate stagger fadeIn"
+                animate-delay="0.45s"
+                target="_blank"
+                >GITHUB</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/mr_prince_._.__/"
+                class="footer__link animate stagger fadeIn"
+                animate-delay="0.25s"
+                target="_blank"
+                >INSTAGRAM</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+/* Rotating */
+.animate.fullrotate {
+  animation: fullrotate 3s infinite linear;
+}
+
+@keyframes fullrotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate.scaler {
+  animation: scaler 1s 1 linear;
+}
+@keyframes scaler {
+  from {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate.stagger {
+  animation: stagger 0.75s 1 ease-in-out backwards;
+}
+@keyframes stagger {
+  from {
+    transform: translate(50rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0rem);
+    opacity: 1;
+  }
+}
+
+.animate.z1eroTo100 {
+  animation: zeroto100 0.5s 1 ease-in-out forwards;
+}
+
+@keyframes zerto100 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate.fadeIn {
+  animation: fadeIn 1s 1 ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    clip-path: inset(1000% 0 0 0);
+    transform: translateY(15rem);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+/* load animation */

@@ -1,0 +1,334 @@
+.projects_holder {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10rem);
+    z-index: 9999;
+    box-shadow: 0px 0px 0.5rem rgba(255, 255, 255, 0.564);
+  }
+  .root.dark header {
+    background-color: rgba(0, 0, 0, 0.898);
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .root {
+    overflow: auto;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    & .logo {
+      font-size: 2.25rem;
+      padding-block: 0.05rem;
+    }
+    & .nav__links {
+      gap: 1.05rem;
+      & li:first-child {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 5rem;
+      }
+    }
+  }
+  main {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-template-rows: 25rem 25rem 1fr 15rem 25rem 5rem;
+    grid-template-areas:
+      "hero"
+      "author"
+      "projects"
+      "about-me"
+      "contact"
+      "footer";
+  }
+  section.hero {
+    grid-area: hero;
+    & h1 {
+      margin-bottom: 1.62rem;
+    }
+  }
+  section.author {
+    grid-area: author;
+  }
+  section.projects {
+    grid-area: projects;
+    & .project .project_img:hover {
+      height: 25rem;
+    }
+  }
+  section.about-me {
+    grid-area: about-me;
+  }
+  section.contact {
+    grid-area: contact;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 576px) {
+  .root {
+    overflow: auto;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    & .logo {
+      font-size: 2.25rem;
+      padding-block: 0.05rem;
+    }
+    & .nav__links {
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+  main {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-rows: 8rem 25rem 1fr 10rem 10rem 5rem;
+    grid-template-areas:
+      "hero author"
+      "hero author"
+      "projects projects"
+      " contact about-me"
+      " contact about-me"
+      "footer footer";
+  }
+  section.hero {
+    grid-area: hero;
+    & h1 {
+      margin-bottom: 1.62rem;
+    }
+  }
+  section.author {
+    grid-area: author;
+  }
+  section.projects {
+    grid-area: projects;
+    & .project .project_img:hover {
+      height: 30rem;
+    }
+  }
+  section.about-me {
+    grid-area: about-me;
+  }
+  section.contact {
+    grid-area: contact;
+  }
+  footer {
+    grid-area: footer;
+    & .footer__links {
+      gap: 4rem;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 576px) {
+  section.projects {
+    grid-area: projects;
+    & .project .project_img:hover {
+      height: 35rem;
+    }
+  }
+  .about-me p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 700px) {
+  .root {
+    overflow: auto;
+  }
+  .about-me p {
+    font-size: 1.4rem;
+  }
+  header nav {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-between;
+    & .logo {
+      font-size: 2.25rem;
+      padding-block: 0.05rem;
+    }
+    & .nav__links {
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+  main {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-rows: 8rem 25rem 1fr 10rem 10rem 5rem;
+    grid-template-areas:
+      "hero author"
+      "hero author"
+      "projects projects"
+      " contact about-me"
+      " contact about-me"
+      "footer footer";
+  }
+  section.hero {
+    grid-area: hero;
+    & h1 {
+      margin-bottom: 1.62rem;
+    }
+  }
+  section.author {
+    grid-area: author;
+  }
+  section.projects {
+    grid-area: projects;
+    & .projects_holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    & .project {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    & .project .project_img:hover {
+      /* height: 100%; */
+    }
+    & .projects_info {
+      text-align: center;
+      grid-column: 1 / span 2;
+    }
+  }
+  section.about-me {
+    grid-area: about-me;
+  }
+  section.contact {
+    grid-area: contact;
+  }
+  footer {
+    grid-area: footer;
+    & .footer__links {
+      gap: 4rem;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  /* @media only screen and (min-width: 700px) and (max-width: 786px) { */
+  .root {
+    overflow: auto;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 860px) {
+  main {
+    display: grid;
+    grid-template-columns: 16rem 3.5rem 2.5rem 26rem 1fr;
+    grid-template-rows: 32rem 12rem 3rem 3rem;
+    gap: 1.3rem;
+  }
+  section.projects {
+    & .project .project_img:hover {
+      height: 16rem;
+    }
+  }
+}
+@media only screen and (min-width: 860px) and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 21rem 3.5rem 3rem 28rem 1fr;
+    grid-template-rows: 32rem 12rem 3rem 3rem;
+    gap: 1.3rem;
+  }
+  section.projects {
+    & .project .project_img:hover {
+      height: 16rem;
+    }
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 24rem 5.5rem 3.5rem 27rem 1fr;
+    grid-template-rows: 32rem 12rem 3rem 3rem;
+    gap: 1.3rem;
+  }
+  section.projects {
+    & .project .project_img:hover {
+      height: 17rem;
+    }
+  }
+  footer {
+    & .footer__links {
+      gap: 4rem;
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+  .project:hover .project_img {
+    height: 18rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html {
+    background: #f9f1f0;
+  }
+  html:has(.root.dark) {
+    background: #000;
+  }
+  .root {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 27rem 3.5rem 2.5rem 30rem 1fr;
+    grid-template-rows: 32rem 12rem 3rem 3rem;
+    gap: 1.3rem;
+  }
+
+  .project:hover .project_img {
+    height: 20rem;
+  }
+
+  footer {
+    & .footer__links {
+      gap: 4rem;
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .root {
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+    &::after {
+      content: "PLEASE VIEW ON BIGGER SCREEN by Yuvaraj";
+      position: absolute;
+      inset: 0;
+      padding-inline: 6rem;
+      display: grid;
+      place-content: center;
+      z-index: 999;
+      font-size: 1.35rem;
+      font-weight: 600;
+      background: black;
+      color: white;
+    }
+  }
+}

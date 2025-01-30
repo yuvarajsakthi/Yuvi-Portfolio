@@ -1,0 +1,100 @@
+main {
+  position: relative;
+}
+header,
+section,
+footer {
+  transition: all 0.51s;
+}
+section.loads,
+header.loads,
+footer.loads {
+  opacity: 0;
+  filter: blur(0.5rem);
+}
+
+section.author.loads {
+  filter: drop-shadow(0px 0px 0.5rem rgba(0, 0, 0, 0.42));
+  opacity: 1;
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  transform: scale(1.2) translate(-2rem, 10rem);
+}
+
+.header.loads {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+section.hero.loads {
+  position: absolute;
+  top: 80%;
+  left: 120%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+section.projects.loads {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+section.about-me.loads {
+  position: absolute;
+  top: -80%;
+  left: 120%;
+  transform: scale(0);
+}
+
+section.contact.loads {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 0%) scale(0);
+}
+
+footer.loads {
+  position: absolute;
+  top: -30%;
+  left: -60%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* RESPONSIVE INITIAL */
+
+@media only screen and (max-width: 900px) {
+  section.author.loads {
+    filter: drop-shadow(0px 0px 0.5rem rgba(0, 0, 0, 0.42));
+    opacity: 1;
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    transform: scale(1.2) translate(-0.5rem, 8rem);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  section.author.loads {
+    filter: drop-shadow(0px 0px 0.5rem rgba(0, 0, 0, 0.42));
+    opacity: 1;
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    transform: scale(0.85) translate(-32vw, 3rem);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  section.author.loads {
+    filter: drop-shadow(0px 0px 0.5rem rgba(0, 0, 0, 0.42));
+    opacity: 1;
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    transform: scale(0.75) translate(-0vw, -25rem);
+  }
+}
